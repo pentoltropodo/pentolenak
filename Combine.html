@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rejak — Budha Tidur & Rejabio (Satu Halaman)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #8e7dbe;
+      --secondary: #f3e9ff;
+      --accent: #d1cfe2;
+      --text: #333;
+      --bg: #fffafc;
+      --footer: #6a5acd;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--footer));
+      color: #fff;
+      padding: 36px 20px;
+      text-align: center;
+      box-shadow: 0 6px 15px rgba(0,0,0,.1);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    header h1 { font-size: 2rem; font-weight: 700; letter-spacing: .5px; }
+    .sub { opacity: .9; font-weight: 300; font-size: .95rem; margin-top: 6px; }
+    .topbar {
+      background-color: var(--accent);
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 84px;
+      z-index: 40;
+      box-shadow: 0 4px 12px rgba(0,0,0,.06) inset;
+    }
+    .btn {
+      appearance: none;
+      border: 0;
+      background: #fff;
+      padding: 10px 16px;
+      border-radius: 999px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.08);
+      cursor: pointer;
+      font-weight: 600;
+      transition: transform .06s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(0,0,0,.12); }
+    .btn:active { transform: translateY(0); }
+    .btn-primary { background: var(--secondary); }
+    .container {
+      max-width: 1000px;
+      margin: 28px auto;
+      padding: 0 16px 28px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.08);
+      margin-bottom: 28px;
+    }
+    h2.section-title {
+      font-size: 1.6rem;
+      color: var(--primary);
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+    p { margin-bottom: 14px; font-size: 1.03rem; }
+    img.responsive {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin: 18px 0;
+      box-shadow: 0 6px 18px rgba(0,0,0,.1);
+      object-fit: cover;
+    }
+    table.bio {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.06);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    table.bio td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #eee;
+      vertical-align: top;
+    }
+    table.bio tr:nth-child(even) { background: #faf7ff; }
+    table.bio td:first-child { width: 160px; font-weight: 600; color: #444; }
+    .section-actions {
+      margin-top: 8px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    footer {
+      background-color: var(--footer);
+      color: #fff;
+      text-align: center;
+      padding: 22px 10px;
+      font-size: .95rem;
+      letter-spacing: .4px;
+    }
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 900px) {
+      .grid-two { grid-template-columns: 1.5fr 1fr; }
+    }
+    /* Smooth anchor scroll */
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>REJAK</h1>
+    <div class="sub">Satu halaman berisi: Budha Tidur Trowulan & Biodata Rejabio</div>
+  </header>
+
+  <div class="topbar">
+    <button class="btn btn-primary" onclick="location.hash='#budha'">Masuk ke Budha Tidur</button>
+    <button class="btn btn-primary" onclick="location.hash='#rejabio'">Masuk ke Rejabio</button>
+    <a class="btn" href="budha tidur mjk.html" target="_blank" rel="noopener">Buka Halaman Budha (asli)</a>
+    <a class="btn" href="rejabio.html" target="_blank" rel="noopener">Buka Halaman Rejabio (asli)</a>
+  </div>
+
+    <!-- Rejabio Section -->
+    <section id="rejabio" class="card">
+      <h2 class="section-title">Biodata Siswa SMA (Rejabio)</h2>
+      <div class="grid-two">
+        <div>
+          <video controls width="100%" style="border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,.1);">
+            <source src="jo.mp4" type="video/mp4">
+            Browser Anda tidak mendukung tag video.
+          </video>
+          <img src="reja.jpg" alt="Foto Siswa" class="responsive" style="max-width:300px;">
+        </div>
+        <div>
+          <table class="bio">
+            <tr><td>No Absen</td><td>28</td></tr>
+            <tr><td>Nama</td><td>Reza Aulia Alfahri</td></tr>
+            <tr><td>Kelas</td><td>XII C 1</td></tr>
+            <tr><td>Tempat Lahir</td><td>Mojokerto</td></tr>
+            <tr><td>Tanggal Lahir</td><td>13 Maret 2008</td></tr>
+            <tr><td>Alamat</td><td>Dsn. Danarsi, Ds. Kepuhanyar</td></tr>
+            <tr><td>Hobi</td><td>Combat sport</td></tr>
+            <tr><td>Cita-cita</td><td>Miliarder</td></tr>
+          </table>
+          <div class="section-actions">
+            <button class="btn" onclick="location.hash='#budha'">Ke Budha Tidur</button>
+            <a class="btn" href="mojokerto20.html">Home</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Rejak • Satu halaman gabungan
+  </footer>
+</body>
+</html>
